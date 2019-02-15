@@ -15,23 +15,34 @@
   .beam-md(3);
   .beam-sm(6);
   .beam-xs(8);
-  .beam-xxs(10);*/
-  .size-grow(3);
+  .beam-xxs(10);
   .size-grow-lg(3);
   .size-grow-md(6);
   .size-grow-sm(8);
   .size-grow-xs(10);
   .size-grow-xxs(12);
   .valign-wrapper(md-center-col);
+  */
+  .size-grow(10);
+  .size-grow-xs(10);
+  .size-grow-xxs(10);
 }
 .featured-item {
-  margin: auto;
+  .responsive-img();
+  text-align: center;
+  .sm-block({
+    margin: auto;
+  });
 }
 .featured-item__card {
 
 }
 .featured-item__img {
-
+  .responsive-img();
+  text-align: center;
+  .sm-block({
+    margin: auto;
+  });
 }
 .featured-item__contents {
   .padding-Y(25);
@@ -70,4 +81,49 @@
   border: 2px solid #d9c8aa;
   text-transform: uppercase;
 });
+}
+#js_featured {
+  .owl-carousel .owl-nav.disabled {
+    display: block;
+  }
+  .owl-nav {
+
+    button.owl-prev,
+    button.owl-next {
+      border: none;
+      box-shadow: none;
+      width: 49px;
+      height: 49px;
+      background: url("../i/sprite-arrow2.png") 0 0 no-repeat;
+      position: absolute;
+      transform: translateY(-50%);
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    button.owl-prev {
+      .display-left();
+      top: 30%;
+      &:hover {
+        background-position: 0 -49px;
+      }
+
+    }
+
+    button.owl-next {
+      background-position: -49px 0;
+      left: auto;
+      right: -55px;
+      .display-right();
+      top: 30%;
+
+      &:hover {
+        background-position: -49px -49px;
+      }
+    }
+
+
+  }
 }
