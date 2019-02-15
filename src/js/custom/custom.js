@@ -21,8 +21,11 @@ $(document).ready(function() {
                 items:1
             }
         }
-    })
+    });
+
 });
 
 
-
+$(window).load(function () {
+    $(".categories-list").animated("zoomIn");
+});
